@@ -72,3 +72,5 @@ This stops the plugin from blocking the player update packet.
 # Examples
 
 ![Alt text](https://github.com/xenonsmurf/Ashita4-Public-Plugins/blob/master/VNM/example1.png  "example1")
+![Alt text](https://github.com/xenonsmurf/Ashita4-Public-Plugins/blob/master/VNM/example2.png  "example2")
+![Alt text](https://github.com/xenonsmurf/Ashita4-Public-Plugins/blob/master/VNM/example3.png  "example3")
