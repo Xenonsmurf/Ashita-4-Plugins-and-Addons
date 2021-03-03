@@ -11,10 +11,10 @@ commands are not case-sensitive.
 ###### /load VNM
 This loads the plug-in.
 
-###### /vnm SetLineHeight vale
+###### /vnm SetLineHeight value
 e.g /vnm SetLineHeight 1
 
-###### /vnm SetLineColour vale
+###### /vnm SetLineColour value
 e.g /vnm SetLineColour 255
 
 ###### /vnm ShowDistance
