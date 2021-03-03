@@ -32,7 +32,7 @@ turns off wireframe mode.
 
 
 
-## Colours 
+## Some example colour options
 - black   = 0,
 - white   = 16777215,
 - red     = 16711680,
