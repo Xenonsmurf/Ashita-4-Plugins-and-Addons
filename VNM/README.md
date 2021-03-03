@@ -5,9 +5,51 @@ This is a plug-in for Ashita v4.
 Renders a line in game from Player to VNM position, when /heal command is used.
 
 ## Commands 
-/load VNM
+commands are not case-sensitive.
 
+
+#/load VNM
 This loads the plug-in.
+
+#/vnm SetLineHeight vale
+e.g /vnm SetLineHeight 1
+
+#/vnm SetLineColour vale
+e.g /vnm SetLineColour 255
+
+#/vnm ShowDistance
+will display the distance and direction to vnm on screen.
+
+#/vnm HideDistance
+turns off the distance and directon display.
+
+#/vnm WireframeOn
+changes the fill mode to wireframe.
+
+#/vnm WireframeOff
+turns off wireframe mode.
+
+
+
+
+## Colours 
+black   = 0
+white   = 16777215
+red     = 16711680
+lime    = 65280
+blue    = 255
+yellow  = 16776960 
+Cyan    = 65535
+magenta = 16711935
+silver  = 12632256
+gray    = 8421504
+maroon  = 8388608
+olive   = 8421376
+green   = 32768
+purple  = 8388736
+teal    = 32896
+navy    = 128
+
 
 ## Extra Commands
 You don't need to use these commands for the plug-in to work.
