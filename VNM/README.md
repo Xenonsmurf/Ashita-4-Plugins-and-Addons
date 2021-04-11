@@ -8,47 +8,54 @@ Renders a line in game from Player to VNM position, when /heal command is used.
 commands are not case-sensitive.
 
 
-#/load VNM
+###### /load VNM
 This loads the plug-in.
 
+<<<<<<< HEAD
 #/vnm SetLineHeight value
 e.g /vnm SetLineHeight 1
 
 #/vnm SetLineColour value
+=======
+###### /vnm SetLineHeight value
+e.g /vnm SetLineHeight 1
+
+###### /vnm SetLineColour value
+>>>>>>> af6c756c5b090127f54f52df748a2e2855b0dcf2
 e.g /vnm SetLineColour 255
 
-#/vnm ShowDistance
+###### /vnm ShowDistance
 will display the distance and direction to vnm on screen.
 
-#/vnm HideDistance
+###### /vnm HideDistance
 turns off the distance and directon display.
 
-#/vnm WireframeOn
+###### /vnm WireframeOn
 changes the fill mode to wireframe.
 
-#/vnm WireframeOff
+###### /vnm WireframeOff
 turns off wireframe mode.
 
 
 
 
-## Colours 
-black   = 0
-white   = 16777215
-red     = 16711680
-lime    = 65280
-blue    = 255
-yellow  = 16776960 
-Cyan    = 65535
-magenta = 16711935
-silver  = 12632256
-gray    = 8421504
-maroon  = 8388608
-olive   = 8421376
-green   = 32768
-purple  = 8388736
-teal    = 32896
-navy    = 128
+## Some example colour options
+- black   = 0,
+- white   = 16777215,
+- red     = 16711680,
+- lime    = 65280,
+- blue    = 255,
+- yellow  = 16776960, 
+- Cyan    = 65535,
+- magenta = 16711935,
+- silver  = 12632256,
+- gray    = 8421504,
+- maroon  = 8388608,
+- olive   = 8421376,
+- green   = 32768,
+- purple  = 8388736,
+- teal    = 32896,
+- navy    = 128,
 
 
 ## Extra Commands
@@ -67,3 +74,10 @@ This stops the plugin from blocking the player update packet.
 # DISCLAIMER
 
 ## I take no responsibility if you choose to use the Extra Commands. If you use them, you do so at your OWN RISK.
+
+
+# Examples
+
+![Alt text](https://github.com/xenonsmurf/Ashita4-Public-Plugins/blob/master/VNM/example1.png  "example1")
+![Alt text](https://github.com/xenonsmurf/Ashita4-Public-Plugins/blob/master/VNM/example2.png  "example2")
+![Alt text](https://github.com/xenonsmurf/Ashita4-Public-Plugins/blob/master/VNM/example3.png  "example3")
