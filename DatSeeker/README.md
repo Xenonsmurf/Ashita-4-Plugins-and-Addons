@@ -1,6 +1,6 @@
 ##DatSeeker
 
-A Plug-in for Ashita V4 that displays model ID and Rom path info when you change equipment in game.
+A Plug-in for Ashita V4 that displays model ID and Rom path  and type info when you change equipment in game.
 
 ![Alt text](https://github.com/xenonsmurf/Ashita4-Public-Plugins/blob/master/DatSeeker/Test.png  "example1")
 
