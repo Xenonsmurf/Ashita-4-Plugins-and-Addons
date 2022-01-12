@@ -10,4 +10,4 @@ Rich presence for Discord using info from FFXI
 
 # Examples
 
-![Alt text](https://github.com/xenonsmurf/Ashita4-Public-Plugins/blob/master/DiscordRPC/Example.png  "example1")
+![Alt text](https://github.com/XenonSmurf/Ashita4-Plugins/blob/master/DiscordRPC/Example.PNG "example1")
