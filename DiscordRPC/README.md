@@ -25,3 +25,6 @@ once they catch up I will be removing old versions.
 # Requirements
 The Latest version of Ashita v4.
 
+# Special Thanks
+Thorny, for his hard work getting this working correctly, and code clean up. 
+
