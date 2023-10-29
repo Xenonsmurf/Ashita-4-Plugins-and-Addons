@@ -1,2 +1,2 @@
-# Ashita4-Public-Plugins
-Public Plug-ins for Ashita v4
+# Ashita4-Public-Plugins & Addons
+Public Plugins & Addons for Ashita v4
