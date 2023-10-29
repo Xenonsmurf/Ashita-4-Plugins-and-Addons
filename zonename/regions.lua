@@ -54,6 +54,8 @@ local regions = {
     { id = 52, en = "Ra'Kaznar", ja = "ラ・カザナル" },
     { id = 53, en = "Escha", ja = "エスカ" },
     { id = 54, en = "Far East", ja = "ひんがし" },
+	{ id = 98, en = "Ship", ja = "船" },        --Not a real region, this is so i can show Ships
+	{ id = 99, en = "Airship", ja = "飛行船" }, --Not a real region, this is so i can show Airships
 }
 
 return regions
