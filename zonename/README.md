@@ -1,5 +1,6 @@
 # zonename
 This addon for Ashita v4 displays the zone and region name for a short time while changing zones.
+This is a basic port of Windowers Zonename addon.
 
 ![Alt text](https://github.com/xenonsmurf/Ashita-4-Plugins-and-Addons/blob/master/zonename/test.jpg  "example1")
 
@@ -12,7 +13,7 @@ This addon for Ashita v4 displays the zone and region name for a short time whil
 2. Type /addon load zonename
 
 ## How to have Ashita load it automatically:
-1. Go to your windower folder
+1. Go to your Ashita v4 folder
 2. Open the file **_Ashita4/scripts/default.txt_**
 3. Add /addon load zonename to the list of addons to load under "Load Plugins and Addons"
 
