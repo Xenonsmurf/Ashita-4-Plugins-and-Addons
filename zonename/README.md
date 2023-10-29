@@ -1,5 +1,5 @@
 # zonename
-This addon displays the zone and region name for a short time while changing zones.
+This addon for Ashita v4 displays the zone and region name for a short time while changing zones.
 
 ![Alt text](https://github.com/xenonsmurf/Ashita-4-Plugins-and-Addons/blob/master/zonename/test.jpg  "example1")
 
@@ -11,7 +11,7 @@ This addon displays the zone and region name for a short time while changing zon
 1. Login to your character in FFXI
 2. Type /addon load zonename
 
-## How to have windower load it automatically:
+## How to have Ashita load it automatically:
 1. Go to your windower folder
 2. Open the file **_Ashita4/scripts/default.txt_**
 3. Add /addon load zonename to the list of addons to load under "Load Plugins and Addons"
