@@ -1,21 +1,28 @@
--- Based on code by [sylandro] for Windowers Zonename addon.
+-- This is an addon for Ashita v4 that displays zone and region names
+-- with fading effects. It is a port of Windowers zonename addon.
+-- Original code by [sylandro].
 
+-- Define addon information
 addon.name = 'zonename'
 addon.author = 'Xenonsmurf'
 addon.version = '1.1'
 addon.desc = 'Basic Port of Windowers zonename'
 addon.link = 'https://github.com/xenonsmurf/Ashita-4-Plugins-and-Addons'
 
-
--- Load required modules and libraries
-local imgui = require('imgui')
-local regions = require("regions")  -- Import a module for region information
-local regionZones = require("regionZones")  -- Import a module for region-to-zone mapping
-local fonts = require('fonts')  -- Import a module for text font settings
-local settings = require('settings')  -- Import a module for managing settings
+-- Import necessary modules and libraries
+local bit32 = require("bit") -- Import the bit32 library if not already imported
+local regions = require("regions")  -- Module for region information
+local regionZones = require("regionZones")  -- Module for region-to-zone mapping
+local fonts = require('fonts')  -- Module for text font settings
+local settings = require('settings')  -- Module for managing settings
 require('common')  -- Import a common utility module
-local currentZoneID, currentZoneName, currentRegionName, showFont, screenWidth, screenHeight, screenCenterX, screenCenterY
 
+-- Initialize variables
+local currentZoneID, currentZoneName, currentRegionName, showFont, screenWidth, screenHeight, screenCenterX
+local fadeStartTime = nil
+local Alpha = 255
+
+-- Import D3D8 for handling the display
 local d3d8 = require('d3d8')
 local d3d8Device = d3d8.get_device()
 
@@ -65,15 +72,17 @@ end)
 -- Register a packet_in event to handle zone change information
 ashita.events.register('packet_in', 'packet_in_callback1', function(event)
     if event.id == 0x0A then  -- Check if it's a zone change packet
-        local mog = struct.unpack('b', event.data, 0x80 + 1)
-        if mog ~= 1 then
+        local moghouse = struct.unpack('b', event.data, 0x80 + 1)
+        if moghouse ~= 1 then
             coroutine.sleep(1)
+            ZoneNameDisplay.color  = defaults.color
+            RegionNameDisplay.color  = defaults.color
             currentZoneID = AshitaCore:GetMemoryManager():GetParty():GetMemberZone(0)
             currentZoneName = AshitaCore:GetResourceManager():GetString('zones.names', currentZoneID)  -- Get the current zone name
             local regionID = getRegionIDByZoneID(currentZoneID)  -- Get the region ID based on the zone ID
             currentRegionName = getRegionNameById(regionID)  -- Get the region name based on the region ID
             if currentRegionName then
-                currentRegionName = "- " .. currentRegionName .. " -"
+                currentRegionName = "-" .. currentRegionName .. "-"
                 showFont = true
             else
                 print("[zonename] Region Name not found for the given zone ID, regionZones may need to be updated.")
@@ -82,42 +91,84 @@ ashita.events.register('packet_in', 'packet_in_callback1', function(event)
     end
 end)
 
-
 -- Register a d3d_present event to display the OSD elements
 ashita.events.register('d3d_present', 'present_cb', function()
     if showFont then
-        displayRegionName()  -- Call the function to display the region name
-        displayZoneName()  -- Call the function to display the zone name
-        coroutine.sleep(5)
-        showFont = false
-        RegionNameDisplay.visible = false
-        ZoneNameDisplay.visible = false
+       setupRegionText()
+       setupZoneText()
+       startFade()
     end
 end)
 
--- Function to display the region name on the screen
-function displayRegionName()
+-- Set up the region text display
+function setupRegionText()
     local textLength = string.len(currentRegionName)
     local fontSize = defaults.font_height
     local textWidth = textLength * fontSize
-    local halfTextWidth = math.ceil(textWidth / 3)
+    local halfTextWidth = textWidth / 3
     RegionNameDisplay.position_x = defaults.position_x - halfTextWidth
     RegionNameDisplay.position_y = defaults.position_y - 330
     RegionNameDisplay.text = currentRegionName
-    RegionNameDisplay.visible = true
 end
 
--- Function to display the zone name on the screen
-function displayZoneName()
+-- Set up the zone text display
+function setupZoneText()
     local textLength = string.len(currentZoneName)
     local fontSize = defaults.font_height * 2
     local textWidth = textLength * fontSize
-    local halfTextWidth = math.ceil(textWidth / 3)
+    local halfTextWidth = textWidth / 3
     ZoneNameDisplay.font_height = fontSize
     ZoneNameDisplay.position_x = defaults.position_x - halfTextWidth
     ZoneNameDisplay.position_y = defaults.position_y - 300
     ZoneNameDisplay.text = currentZoneName
-    ZoneNameDisplay.visible = true
+end
+
+-- Start the fade effect
+function startFade()
+    if bit32.band(ZoneNameDisplay.color, RegionNameDisplay.color) then
+        local maxAlpha = 255 -- Set the maximum alpha to fully visible
+        local minAlpha = 0 -- Set the minimum alpha to fully transparent
+        local fadeDuration = 6 -- Total duration for fading out in seconds
+
+        if fadeStartTime == nil then
+            fadeStartTime = os.clock() -- Record the start time of the fade
+        end
+
+        local elapsed = os.clock() - fadeStartTime
+        local alpha = maxAlpha - (maxAlpha * (elapsed / fadeDuration))
+
+        -- Ensure alpha doesn't go below the minimum value
+        alpha = math.max(alpha, minAlpha)
+
+        -- Extract the RGB components from the color
+        local r = bit32.band(ZoneNameDisplay.color, 0xFF)
+        local g = bit32.band(bit32.rshift(ZoneNameDisplay.color, 8), 0xFF)
+        local b = bit32.band(bit32.rshift(ZoneNameDisplay.color, 16), 0xFF)
+
+        -- Calculate the new color with adjusted alpha
+        local newColor = bit32.bor(
+            bit32.lshift(alpha, 24),
+            bit32.lshift(b, 16),
+            bit32.lshift(g, 8),
+            r
+        )
+
+        -- Set the updated color
+        ZoneNameDisplay.color = newColor
+        RegionNameDisplay.color = newColor
+        Alpha = alpha
+
+        ZoneNameDisplay.visible = true
+        RegionNameDisplay.visible = true
+
+        -- Reset fading when it's fully faded out
+        if alpha == minAlpha then
+            fadeStartTime = nil
+            showFont = false
+            ZoneNameDisplay.visible = false
+            RegionNameDisplay.visible = false
+        end
+    end
 end
 
 -- Function to get the region name by region ID
