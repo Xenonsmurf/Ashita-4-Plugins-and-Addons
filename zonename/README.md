@@ -1,4 +1,8 @@
 # zonename
+
+##No longer suported. 
+
+
 This addon for Ashita v4 displays the zone and region name for a short time while changing zones.
 This is a basic port of Windowers Zonename addon.
 
