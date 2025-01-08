@@ -1,7 +1,7 @@
 # WeatherFX Plugin
 
 ## Description
-WeatherFX Plugin for Ashita v4, interacts with the game’s internal weather system to dynamically modify weather effects during gameplay. By leveraging the game’s own functions for setting weather, the plugin attempts to set the weather effect as requested by the user. If the request fails (e.g., invalid weather type or unavailable resources), the game will fall back to a default weather setting of Suny or NULL, ensuring the game continues to run smoothly. If NULL the sky will turn black, user will need to select a differnt weather_tag.
+The WeatherFX Plugin for Ashita v4 interacts with the game’s weather system to change weather effects during gameplay. It uses the game’s built-in functions to set the weather based on the user’s request. If the request fails (e.g., invalid weather or missing resources), it will default to Sunny or NULL. If the weather is set to NULL, the sky will turn black, and the user will need to choose a different weather tag.
 
 ## /load WeatherFX
 This loads the plug-in.
