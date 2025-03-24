@@ -14,11 +14,11 @@ This Plug for Ashita v4 displays a Recast Detours Navmesh in game.
    if not you will drop fps. 
    
  # Please Note 
- ## This Plugin looks for navmesh files in the following location.
- ## Ashita v4\config\NavMesh Files\
- ## All navmesh files must be in the following format zoneID.nav
- ## I use the d3d9 Proxy by Atom0s, and have no no issues. 
+  This Plugin looks for navmesh files in the following location.
+  Ashita v4\config\NavMesh Files\
+  All navmesh files must be in the following format zoneID.nav
+  I use the d3d9 Proxy by Atom0s, and have no no issues. 
 
-## Special thanks to Atom0s for all the hard work on Ashita and for all the help!  
+## Special thanks to Atom0s for all the hard work on Ashita and for all the help over the years.
 ![Alt text](https://github.com/xenonsmurf/Ashita-4-Plugins-and-Addons/blob/master/Novo/test1.png  "example1")
 
