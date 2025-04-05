@@ -16,11 +16,13 @@ This Plug for Ashita v4 displays a Recast Detours Navmesh in game.
    if not you will drop fps. 
    
  ## Please Note 
- # This Plugin looks for navmesh files in the following location.
- # Ashita v4\config\NavMesh Files\
- # All navmesh files must be in the following format zoneID.nav
- # The smaller the tiles, the lower the FPS on Large zones.
- # Transparency support, but note that it does not use depth.
+ 1. This Plugin looks for navmesh files in the following location: Ashita v4\config\NavMesh Files\
+ 2. All navmesh files must be in the following format zoneID.nav
+ 3. The smaller the tiles, the lower the FPS on Large zones.
+ 4. Transparency support, but note that it does not use depth.
+
+ ## Recommendation
+1. For the best performance, in-game use /fps 1 and make sure to use a D3D Proxy. - I've tested on both used in FFXI, with no issues.
 
 =======
 # Novo
@@ -29,7 +31,7 @@ This Plug for Ashita v4 displays a Recast Detours Navmesh in game.
 
 # How to install:
 1. Download the dll from here.
-2. Copy the **_Novo.dll_** file to your **_Ashita4/Plugins** folder
+2. Copy the **Novo.dll_** file to your **_Ashita4/Plugins** folder
 
 # How to enable it in-game:
 1. In game type /load Novo
@@ -37,12 +39,6 @@ This Plug for Ashita v4 displays a Recast Detours Navmesh in game.
 3. You can select, "Load Mesh on Zone" and it will load the mesh when you zone 
 4. Mesh Render Distance - Please note for large zones it's best to keep this setting low < 100y
    if not you will drop fps. 
-   
- # Please Note 
-  This Plugin looks for navmesh files in the following location.
-  Ashita v4\config\NavMesh Files\
-  All navmesh files must be in the following format zoneID.nav
-  I use the d3d9 Proxy by Atom0s, and have no no issues. 
 
 ## Special thanks
 Atom0s.
