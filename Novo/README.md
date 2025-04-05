@@ -2,7 +2,7 @@
 # Novo
 
 
-This Plug for Ashita v4 displays a Recast Detours Navmesh in game.
+This PlugIn for Ashita v4 displays a Recast Detours Navmesh in game.
 
 ## How to install:
 1. Download the repository [here](https://github.com/xenonsmurf/Ashita-4-Plugins-and-Addons/archive/cf46b0f0dc5ac4840ee04133ba68499f6fd5cebc.zip)
