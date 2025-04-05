@@ -4,8 +4,6 @@
 
 This Plug for Ashita v4 displays a Recast Detours Navmesh in game.
 
-![alt text](https://github.com/Xenonsmurf/Ashita-4-Plugins-and-Addons/blob/master/Novo/test1.png?raw=true)
-
 ## How to install:
 1. Download the repository [here](https://github.com/xenonsmurf/Ashita-4-Plugins-and-Addons/archive/cf46b0f0dc5ac4840ee04133ba68499f6fd5cebc.zip)
 2. Copy the **_Novo.dll_** file to your **_Ashita4/Plugins** folder
@@ -21,6 +19,8 @@ This Plug for Ashita v4 displays a Recast Detours Navmesh in game.
  # This Plugin looks for navmesh files in the following location.
  # Ashita v4\config\NavMesh Files\
  # All navmesh files must be in the following format zoneID.nav
+ # The smaller the tiles, the lower the FPS on Large zones.
+ # Transparency support, but note that it does not use depth.
 
 =======
 # Novo
@@ -44,7 +44,9 @@ This Plug for Ashita v4 displays a Recast Detours Navmesh in game.
   All navmesh files must be in the following format zoneID.nav
   I use the d3d9 Proxy by Atom0s, and have no no issues. 
 
-## Special thanks to Atom0s for all the hard work on Ashita and for all the help over the years.
-![Alt text](https://github.com/xenonsmurf/Ashita-4-Plugins-and-Addons/blob/master/Novo/test1.png  "example1")
+## Special thanks
+Atom0s.
+Thorny.
 
->>>>>>> 857f884c01eb95e62b9c6b547621b4d17234a748
+![alt text](https://github.com/Xenonsmurf/Ashita-4-Plugins-and-Addons/blob/master/Novo/test1.png?raw=true)
+
