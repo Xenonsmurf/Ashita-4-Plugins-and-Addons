@@ -4,7 +4,7 @@
 
 This Plug for Ashita v4 displays a Recast Detours Navmesh in game.
 
-![Alt text]([https://github.com/xenonsmurf/Ashita-4-Plugins-and-Addons/blob/master/Novo/test.png  "example1")]
+![Alt text]([https://github.com/Xenonsmurf/Ashita-4-Plugins-and-Addons/blob/master/Novo/test1.png example1])
 
 ## How to install:
 1. Download the repository [here](https://github.com/xenonsmurf/Ashita-4-Plugins-and-Addons/archive/cf46b0f0dc5ac4840ee04133ba68499f6fd5cebc.zip)
