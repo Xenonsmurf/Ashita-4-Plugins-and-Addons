@@ -1,10 +1,6 @@
 # zonename
 
-<<<<<<< HEAD
 # No longer supported. 
-=======
-# No longer suported. 
->>>>>>> 9e06ee0a9fae6fee88aaa5293b6dd53b60699a8d
 
 
 This addon for Ashita v4 displays the zone and region name for a short time while changing zones.
@@ -30,3 +26,4 @@ This is a basic port of Windowers Zonename addon.
 2. Edit the addon settings file: **_Ashita/config/addons/zonename/playername/settings.xml_**
 3. Save the file
 4. Type /addon load zonename
+
