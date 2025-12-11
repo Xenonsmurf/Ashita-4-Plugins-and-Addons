@@ -39,7 +39,3 @@ To ensure compatibility, this repository targets the following versions:
 ## 🙏 Special Thanks
 
 **Atom0s** & **Thorny**
-
-## 📄 About This Repository
-
-This collection is intended for anyone using Ashita v4 who wants helpful visual aids, debugging tools, QoL improvements, or fun functionality. Contributions, improvements, and forks are welcome.
