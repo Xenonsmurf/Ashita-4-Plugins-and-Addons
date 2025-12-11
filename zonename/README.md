@@ -1,6 +1,6 @@
 # zonename
 
-##No longer suported. 
+# No longer suported. 
 
 
 This addon for Ashita v4 displays the zone and region name for a short time while changing zones.
