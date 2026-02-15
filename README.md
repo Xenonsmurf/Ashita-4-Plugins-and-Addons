@@ -32,7 +32,7 @@ To ensure compatibility, this repository targets the following versions:
 
 **Ashita Interface Version:** 4.30  
 **FFXI Game Version:** 30251204_1  
-**Last updated:** 11/12/2025
+**Last updated:** 15/02/2026
 
 ---
 
