@@ -83,5 +83,7 @@ The plugin provides tools for extracting geometry, building navmeshes, editing n
 
 ![Novo in-game NavMesh editor](https://github.com/Xenonsmurf/Ashita-4-Plugins-and-Addons/blob/master/Novo/test1.png?raw=true)
 
+![Novo in-game NavMesh demo](https://raw.githubusercontent.com/Xenonsmurf/Ashita-4-Plugins-and-Addons/master/Novo/NovoTest.gif)
+
 
 
