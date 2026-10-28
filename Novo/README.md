@@ -64,8 +64,6 @@ The zone ID filename convention is intended for automatic zone loading. You can 
 
 - Navmesh rendering has been improved and should no longer cause the severe FPS drops experienced previously.
 - Large zones and complex navmeshes can still affect performance, particularly during building and tile rebuilding.
-- Adjust the mesh render distance to suit the zone. For large zones, a distance below `100y` is a reasonable starting point.
-- Transparency is supported, although the overlay has limitations when visualising geometry that overlaps other game surfaces.
 - For the best performance, use `/fps 1` in-game and a compatible D3D proxy. Both commonly used FFXI D3D proxy options have been tested without issues.
 
 ## Development and Usage
